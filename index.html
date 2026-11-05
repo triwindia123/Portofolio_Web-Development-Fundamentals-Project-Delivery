@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri Windia Ningrum - Portfolio | Web Development & Project Delivery</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#f0f9ff',
+                            100: '#e0f2fe',
+                            500: '#0284c7',
+                            600: '#0284c7',
+                            700: '#0369a1',
+                            800: '#075985',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+
+    <!-- Navigation Bar -->
+    <nav class="fixed top-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <a href="#hero" class="text-xl font-extrabold text-sky-600 dark:text-sky-400">
+                    TWN<span class="text-slate-700 dark:text-slate-200">.dev</span>
+                </a>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8 text-sm font-semibold">
+                    <a href="#about" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">About</a>
+                    <a href="#skills" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Skills</a>
+                    <a href="#projects" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Projects</a>
+                    <a href="#education" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Education & Experience</a>
+                    <a href="#contact" class="hover:text-sky-600 dark:hover:text-sky-400 transition-colors">Contact</a>
+                </div>
+
+                <div class="flex items-center space-x-4">
+                    <!-- Dark/Light Theme Toggle -->
+                    <button id="themeToggle" aria-label="Toggle Theme" class="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 transition-colors">
+                        <i id="themeIcon" class="fas fa-moon text-lg"></i>
+                    </button>
+                    <!-- Mobile Menu Button -->
+                    <button id="menuBtn" aria-label="Toggle Menu" class="md:hidden p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">
+                        <i class="fas fa-bars text-lg"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 px-4 pt-2 pb-4 space-y-2 text-sm font-semibold">
+            <a href="#about" class="block py-2 hover:text-sky-600 dark:hover:text-sky-400">About</a>
+            <a href="#skills" class="block py-2 hover:text-sky-600 dark:hover:text-sky-400">Skills</a>
+            <a href="#projects" class="block py-2 hover:text-sky-600 dark:hover:text-sky-400">Projects</a>
+            <a href="#education" class="block py-2 hover:text-sky-600 dark:hover:text-sky-400">Education & Experience</a>
+            <a href="#contact" class="block py-2 hover:text-sky-600 dark:hover:text-sky-400">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-12">
+        <div class="flex-1 space-y-6">
+            <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sky-100 dark:bg-sky-950/60 border border-sky-200 dark:border-sky-800 text-sky-700 dark:text-sky-300 text-xs font-semibold">
+                <span class="w-2 h-2 rounded-full bg-sky-500 animate-ping"></span>
+                Applying for Magang Hub @ Ayra Sagara Abadi
+            </div>
+            <h1 class="text-4xl sm:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+                Hi, I'm <span class="text-sky-600 dark:text-sky-400">Tri Windia Ningrum</span>
+            </h1>
+            <p class="text-lg sm:text-xl font-medium text-slate-600 dark:text-slate-300">
+                Web Development for Fundamentals & Project Delivery
+            </p>
+            <p class="text-slate-600 dark:text-slate-400 leading-relaxed max-w-2xl">
+                Information Systems Graduate from Universitas Amikom Yogyakarta (GPA 3.81/4.00) specializing in building responsive web interfaces using HTML, CSS, Bootstrap 5, and JavaScript, while managing structured project deliveries.
+            </p>
+            
+            <div class="flex flex-wrap gap-4 pt-2">
+                <a href="#projects" class="px-6 py-3 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-semibold shadow-lg shadow-sky-600/25 transition-all">
+                    View My Projects
+                </a>
+                <a href="#contact" class="px-6 py-3 rounded-xl bg-slate-200 dark:bg-slate-800 hover:bg-slate-300 dark:hover:bg-slate-700 font-semibold transition-all">
+                    Get in Touch
+                </a>
+            </div>
+
+            <div class="flex items-center gap-6 pt-4 text-slate-600 dark:text-slate-400">
+                <a href="https://linkedin.com/in/tri-windia-82b1ba301" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 text-xl transition-colors" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/triwindia123" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 text-xl transition-colors" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://drive.google.com/drive/folders/194K9ceoCmCdlCzPBpVHTLK_U7PfdqtVp?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-sky-600 dark:hover:text-sky-400 text-xl transition-colors" title="Drive Portfolio">
+                    <i class="fab fa-google-drive"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="w-full md:w-5/12 flex justify-center">
+            <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-3xl bg-gradient-to-tr from-sky-500 to-indigo-600 p-1 shadow-2xl">
+                <div class="w-full h-full bg-slate-900 rounded-[22px] flex flex-col items-center justify-center text-center p-6 text-white space-y-4">
+                    <div class="w-20 h-20 rounded-2xl bg-sky-500/20 text-sky-400 flex items-center justify-center text-3xl">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Web Developer</h3>
+                        <p class="text-xs text-slate-400 mt-1">HTML • CSS • Bootstrap 5 • JavaScript</p>
+                    </div>
+                    <div class="w-full pt-4 border-t border-slate-800 flex justify-around text-xs">
+                        <div>
+                            <span class="block font-bold text-sky-400 text-base">3.81</span>
+                            <span class="text-slate-400">GPA</span>
+                        </div>
+                        <div class="border-r border-slate-800"></div>
+                        <div>
+                            <span class="block font-bold text-sky-400 text-base">4+</span>
+                            <span class="text-slate-400">Awards</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-slate-100 dark:bg-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">About Me</h2>
+                <div class="w-16 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-4 text-slate-600 dark:text-slate-300 leading-relaxed">
+                    <p>
+                        I am an Information Systems graduate from <strong>Universitas Amikom Yogyakarta</strong> with a GPA of <strong>3.81/4.00</strong>. I have a strong passion for Web Development, frontend architecture, and structured project management.
+                    </p>
+                    <p>
+                        My core technical stack centers around fundamental web development technologies: <strong>HTML, CSS, Bootstrap 5, and JavaScript</strong>. In addition, I am familiar with modern design tools such as Figma for UI/UX wireframing and prototype design.
+                    </p>
+                    <p>
+                        Having completed specialized training in Frontend HTML, Frontend and Backend Integration, as well as Project Management and Scrum Frameworks, I possess solid analytical thinking, attention to detail, and team collaboration skills to deliver web projects efficiently.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Education</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Bachelor of Information Systems, Amikom (GPA 3.81)</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Core Tech</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">HTML5, CSS3, Bootstrap 5, JavaScript</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Project Delivery</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Scrum Framework, SDLC & Agile Fundamentals</p>
+                    </div>
+
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                        <div class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg mb-4">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="font-bold text-slate-900 dark:text-white mb-1">Achievements</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">AMICTA 2025 Winner & Gemasi 2025 Awardee</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center max-w-3xl mx-auto mb-16">
+            <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Technical Skills</h2>
+            <p class="text-slate-600 dark:text-slate-400 mt-2">Core tools and technologies I utilize for web development and project management</p>
+            <div class="w-16 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+        </div>
+
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center hover:border-sky-500 dark:hover:border-sky-500 transition-all">
+                <i class="fab fa-html5 text-4xl text-orange-500 mb-3"></i>
+                <h3 class="font-bold text-slate-900 dark:text-white">HTML5</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Semantic Markup & Accessibility</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center hover:border-sky-500 dark:hover:border-sky-500 transition-all">
+                <i class="fab fa-css3-alt text-4xl text-blue-500 mb-3"></i>
+                <h3 class="font-bold text-slate-900 dark:text-white">CSS3</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Responsive Design & Layouts</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center hover:border-sky-500 dark:hover:border-sky-500 transition-all">
+                <i class="fab fa-bootstrap text-4xl text-purple-600 mb-3"></i>
+                <h3 class="font-bold text-slate-900 dark:text-white">Bootstrap 5</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">UI Framework & Components</p>
+            </div>
+
+            <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 text-center hover:border-sky-500 dark:hover:border-sky-500 transition-all">
+                <i class="fab fa-js text-4xl text-yellow-400 mb-3"></i>
+                <h3 class="font-bold text-slate-900 dark:text-white">JavaScript</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">DOM Manipulation & Interactivity</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-slate-100 dark:bg-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Featured Projects</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">A showcase of web applications built with HTML, CSS, Bootstrap, and JavaScript</p>
+                <div class="w-16 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" id="projectsGrid">
+                <!-- Web Project 1 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300">Web Development</span>
+                            <i class="fas fa-globe text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Community Administration Portal</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Responsive neighborhood management portal for citizen records, official document requests, and community cash registers.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">HTML5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Bootstrap 5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/triwindia123" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-1">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/194K9ceoCmCdlCzPBpVHTLK_U7PfdqtVp?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+                            Live Demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 2 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300">Web App</span>
+                            <i class="fas fa-file-invoice text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">FileFlex Web Utility</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Client-side document compression and format conversion web utility prioritizing local data privacy.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">HTML5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">CSS3</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/triwindia123" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-1">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/194K9ceoCmCdlCzPBpVHTLK_U7PfdqtVp?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+                            Live Demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Web Project 3 -->
+                <div class="bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 overflow-hidden shadow-sm hover:shadow-xl transition-all flex flex-col">
+                    <div class="p-6 flex-1 space-y-4">
+                        <div class="flex items-center justify-between">
+                            <span class="px-3 py-1 rounded-full text-xs font-semibold bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300">Point of Sale</span>
+                            <i class="fas fa-cash-register text-slate-400"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-900 dark:text-white">Interactive Point of Sale Web App</h3>
+                        <p class="text-sm text-slate-600 dark:text-slate-400">Web-based transaction system featuring dynamic item calculators, digital receipt layouts, and CSV export functionality.</p>
+                        <div class="flex flex-wrap gap-2 pt-2">
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">HTML5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">Bootstrap 5</span>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="px-6 py-4 bg-slate-50 dark:bg-slate-800/50 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
+                        <a href="https://github.com/triwindia123" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-sky-600 dark:hover:text-sky-400 flex items-center gap-1">
+                            <i class="fab fa-github"></i> Source Code
+                        </a>
+                        <a href="https://drive.google.com/drive/folders/194K9ceoCmCdlCzPBpVHTLK_U7PfdqtVp?usp=sharing" target="_blank" rel="noopener noreferrer" class="text-xs font-bold text-sky-600 dark:text-sky-400 hover:underline flex items-center gap-1">
+                            Live Demo <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education, Work Experience & Achievements -->
+    <section id="education" class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid lg:grid-cols-2 gap-12">
+            <!-- Education & Experience -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="fas fa-graduation-cap text-sky-600"></i> Education
+                    </h2>
+                    <div class="w-12 h-1 bg-sky-600 mt-2 rounded-full"></div>
+                </div>
+
+                <div class="border-l-2 border-slate-200 dark:border-slate-800 pl-6 space-y-8">
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-sky-600 border-4 border-white dark:border-slate-900"></div>
+                        <span class="text-xs font-bold text-sky-600 dark:text-sky-400">2022 - 2026</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">Universitas Amikom Yogyakarta</h3>
+                        <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Bachelor of Information Systems (S1)</p>
+                        <p class="text-xs text-sky-600 dark:text-sky-400 font-bold mt-1">GPA: 3.81 / 4.00</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                            Studied information systems analysis, database management, web programming, application development, and project management framework fundamentals.
+                        </p>
+                    </div>
+
+                    <div class="relative">
+                        <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-slate-400 border-4 border-white dark:border-slate-900"></div>
+                        <span class="text-xs font-bold text-slate-500">2019 - 2022</span>
+                        <h3 class="text-lg font-bold text-slate-900 dark:text-white">SMK Telkom Pekanbaru</h3>
+                        <p class="text-sm font-semibold text-slate-700 dark:text-slate-300">Computer and Network Engineering (TKJ)</p>
+                        <p class="text-xs text-slate-500 font-bold mt-1">Grade Average: 89</p>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-2">
+                            Learned foundational computer systems, network configurations, hardware maintenance, and technical troubleshooting.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="pt-6">
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="fas fa-briefcase text-sky-600"></i> Work Experience
+                    </h2>
+                    <div class="w-12 h-1 bg-sky-600 mt-2 rounded-full mb-6"></div>
+
+                    <div class="p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <h3 class="font-bold text-slate-900 dark:text-white">Staff Officer Internship</h3>
+                                <p class="text-xs font-semibold text-slate-600 dark:text-slate-400">BAPENDA Pekanbaru (Riau Regional Revenue Agency)</p>
+                            </div>
+                            <span class="px-2.5 py-1 rounded-md text-xs bg-slate-100 dark:bg-slate-800 text-slate-500">Aug - Oct 2020</span>
+                        </div>
+                        <ul class="text-xs text-slate-600 dark:text-slate-400 mt-4 space-y-2 list-disc list-inside">
+                            <li>Coordinated administrative documentation and activity reporting for operational tasks.</li>
+                            <li>Supported execution of organizational events and internal workflows.</li>
+                            <li>Collaborated with team members to ensure smooth activity delivery.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Honors & Achievements -->
+            <div class="space-y-8">
+                <div>
+                    <h2 class="text-2xl font-extrabold text-slate-900 dark:text-white flex items-center gap-3">
+                        <i class="fas fa-trophy text-sky-600"></i> Honors & Achievements
+                    </h2>
+                    <div class="w-12 h-1 bg-sky-600 mt-2 rounded-full"></div>
+                </div>
+
+                <div class="space-y-4">
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-xl font-bold">
+                            1st
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-sky-600 dark:text-sky-400">July 2025</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">1st Place - AMICTA 2025</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Universitas Amikom Yogyakarta • Educational Game Category</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-600 dark:text-slate-300 flex items-center justify-center shrink-0 text-xl font-bold">
+                            2nd
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-sky-600 dark:text-sky-400">January 2025</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">2nd Place - GEMASI 2025</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Universitas Amikom Yogyakarta • AR/VR Interactive Media Category</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0 text-xl font-bold">
+                            1st
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-sky-600 dark:text-sky-400">July 2025</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">1st Place - AR TANDARA Category</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Universitas Amikom Yogyakarta • Interactive Media Category</p>
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 flex gap-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-100 dark:bg-sky-950 text-sky-600 dark:text-sky-400 flex items-center justify-center shrink-0 text-xl font-bold">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div>
+                            <span class="text-xs font-bold text-sky-600 dark:text-sky-400">June 2025</span>
+                            <h3 class="font-bold text-slate-900 dark:text-white">Participant - UNITY #13 2025</h3>
+                            <p class="text-xs text-slate-600 dark:text-slate-400 mt-1">Universitas Negeri Yogyakarta • National Software Development Category</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-slate-100 dark:bg-slate-800/50 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-extrabold text-slate-900 dark:text-white">Get In Touch</h2>
+                <p class="text-slate-600 dark:text-slate-400 mt-2">Feel free to reach out regarding the Web Development position or project inquiries</p>
+                <div class="w-16 h-1 bg-sky-600 mx-auto mt-3 rounded-full"></div>
+            </div>
+
+            <div class="max-w-xl mx-auto bg-white dark:bg-slate-900 p-8 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm">
+                <form id="contactForm" class="space-y-6">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Your Name</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Email Address</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 dark:text-slate-300 mb-2">Message</label>
+                        <textarea rows="4" required class="w-full px-4 py-3 rounded-xl bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm"></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-3.5 rounded-xl bg-sky-600 hover:bg-sky-700 text-white font-bold transition-all shadow-md">
+                        Send Message
+                    </button>
+                    <div id="formSuccess" class="hidden p-4 rounded-xl bg-emerald-100 text-emerald-800 text-xs font-semibold text-center">
+                        Thank you! Your message has been sent successfully.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 border-t border-slate-200 dark:border-slate-800 text-center text-xs text-slate-500 dark:text-slate-400">
+        <p>© 2026 Tri Windia Ningrum. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript Interactions -->
+    <script>
+        // Dark / Light Mode Toggle
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeIcon.classList.replace('fa-sun', 'fa-moon');
+        }
+
+        themeToggleBtn.addEventListener('click', () => {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Contact Form Handler
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            formSuccess.classList.remove('hidden');
+            contactForm.reset();
+            setTimeout(() => {
+                formSuccess.classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>
